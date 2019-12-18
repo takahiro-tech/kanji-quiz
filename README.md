@@ -14,6 +14,6 @@
 |------|----|-------|
 |statement|string||
 |choice1|string||
-|choice2|text||
+|choice2|string||
 |choice3|string||
 |answer|integer||
