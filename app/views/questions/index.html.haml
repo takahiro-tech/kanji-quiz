@@ -1,0 +1,10 @@
+= render 'shared/header'
+
+.main
+  .main-body
+    %P.main-body__message
+      難読漢字クイズに挑戦！
+    %p.main-body__secmessage
+      クイズをはじめる⬇︎
+    .main-body__button
+      = link_to '開始', new_question_path

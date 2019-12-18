@@ -1,0 +1,8 @@
+.header
+  .header-list
+    .header-list__user
+      = @user.nickname
+    .header-list__logo
+      難読漢字クイズ
+    .header-list__icon
+      = link_to 'ログアウト', destroy_user_session_path, method: :delete

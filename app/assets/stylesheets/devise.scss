@@ -1,0 +1,103 @@
+body{
+  height: 100vh;
+  width: 100vw;
+}
+
+//--------------------------------SIGNUP--------------------------------//
+
+.sign-up_cha{
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-family: 'Kaiti TC',sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.new_user{
+  width: 390px;
+  margin: 0 auto;
+  .field{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Kaiti TC',sans-serif;
+    margin-top: 25px;
+  }
+  .actions{
+    text-align: center;
+    margin: 50px 0 30px;
+    .dev-btn{
+      background-color: black;
+      color: #fff;
+      padding: 10px 20px;
+      border-style: none;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+    .dev-btn:hover{
+      animation: anime1 0.5s ease infinite alternate;
+    }
+  }
+}
+
+#login-btn{
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  border-style: none;
+  cursor: pointer;
+  border-radius: 20px;
+  text-decoration: none;
+  display: block;
+  width: 65px;
+  margin: 0 auto;
+}
+#login-btn:hover{
+  animation: anime1 0.5s ease infinite alternate;
+}
+
+//--------------------------------SIGNIN--------------------------------//
+
+.login-cha{
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-family: 'Kaiti TC',sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#sign-up_btn{
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  border-style: none;
+  cursor: pointer;
+  border-radius: 20px;
+  text-decoration: none;
+  display: block;
+  width: 95px;
+  margin: 0 auto;
+}
+#sign-up_btn:hover{
+  animation: anime1 0.5s ease infinite alternate;
+}
+
+#fg-pass{
+  cursor: pointer;
+  display: block;
+  width: 210px;
+  margin: 0 auto;
+}
+
+//--------------------------------FORGOTPASSWORD--------------------------------//
+
+.pass-cha{
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-family: 'Kaiti TC',sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+}
+
