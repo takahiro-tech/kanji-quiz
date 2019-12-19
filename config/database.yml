@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: kanji-quiz_production
-  username: kanji-quiz
-  password: <%= ENV['KANJI-QUIZ_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
