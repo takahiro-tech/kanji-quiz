@@ -14,10 +14,9 @@ answers = new Array(); //解答記録
 
 //問題表示
 window.onload = function quiz() {
-	let s,n;
-	let a = 0
+  let s,n;
 	//問題
-  $('#text_question').html(qa[count][a]);
+  $('#text_question').html(qa[count][0]);
   //選択肢
 	s = "";
 	for (n=1;n<=q_sel;n++) {
