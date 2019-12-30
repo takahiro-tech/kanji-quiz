@@ -33,3 +33,4 @@
   Question.create!(
     { statement: text, choice1: select1, choice2: select2, choice3: select3, answer: answer }
   )
+  end
