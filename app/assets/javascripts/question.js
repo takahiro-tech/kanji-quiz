@@ -13,16 +13,18 @@ answers = new Array(); //解答記録
 
 
 //問題表示
-$(function quiz() {
-  let s,n;
-	//問題
-  $('#text_question').html(qa[count][0]);
-  //選択肢
-	s = "";
-	for (n=1;n<=q_sel;n++) {
-		s += "【<a href='javascript:answer(" + n + ")' id='select'>" + n + "：" + qa[count][n] + "</a>】";
-	}
-  $('#text_select').html(s);
+$(function(){
+	function quiz() {
+		let s,n;
+		//問題
+		$('#text_question').html(qa[count][0]);
+		//選択肢
+		s = "";
+		for (n=1;n<=q_sel;n++) {
+			s += "【<a href='javascript:answer(" + n + ")' id='select'>" + n + "：" + qa[count][n] + "</a>】";
+		}
+		$('#text_select').html(s);
+  }
 });
 
 
@@ -53,7 +55,9 @@ function answer(num) {
 	//次の問題を表示
 	count++;
 	if (count < qa.length) {
-		quiz();
+		$(function(){
+			quiz();
+		});
 	} else {
 		//終了
 		$('#text_content').html("お疲れ様でした！");
