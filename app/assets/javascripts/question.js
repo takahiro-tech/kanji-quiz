@@ -14,7 +14,7 @@ answers = new Array(); //解答記録
 
 //問題表示
 $(function(){
-	function quiz() {
+	$.fn.quiz = function(){
 		let s,n;
 		//問題
 		$('#text_question').html(qa[count][0]);
