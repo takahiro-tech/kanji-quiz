@@ -56,7 +56,7 @@ function answer(num) {
 	count++;
 	if (count < qa.length) {
 		$(function(){
-			$(quiz());
+			$().quiz();
 		});
 	} else {
 		//終了
