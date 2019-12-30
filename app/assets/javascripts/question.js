@@ -13,7 +13,7 @@ answers = new Array(); //解答記録
 
 
 //問題表示
-window.onload = function quiz() {
+$(document).ready (function quiz() {
   let s,n;
 	//問題
   $('#text_question').html(qa[count][0]);
@@ -23,7 +23,7 @@ window.onload = function quiz() {
 		s += "【<a href='javascript:answer(" + n + ")' id='select'>" + n + "：" + qa[count][n] + "</a>】";
 	}
   $('#text_select').html(s);
-};
+});
 
 
 //解答表示
@@ -53,7 +53,7 @@ function answer(num) {
 	//次の問題を表示
 	count++;
 	if (count < qa.length) {
-		window.onload();
+		$(document).ready();
 	} else {
 		//終了
 		$('#text_content').html("お疲れ様でした！");
