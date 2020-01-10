@@ -5,26 +5,58 @@
   border-bottom: 1px solid #000;
   box-shadow: 0 2px #fff;
   display: flex;
-  a{
-    text-decoration: none;
-    color: #000;
-  }
+  position: relative;
   &_title{
-    margin-left: 220px;
+    margin: 0 auto;
+  }
+  &_back{
+    position: absolute;
+    left: 20px;
+    a{
+      text-decoration: none;
+      color: #000;
+      font-size: 25px;
+      position: relative;
+    }
+    a::after{
+      @include effect();
+    }
+    a:hover::after{
+      @include transform();
+    }
   }
 }
 
 .score-body{
   overflow: scroll;
-  height: 650px;
+  height: 550px;
   padding: 20px;
+  text-align: center;
+  .score-time{
+    text-align: left;
+    margin: 0 auto;
+    width: 1180px;
+  }
   table{
-    border: 1px solid #333;
+    background-color: #fff;
+    margin: 0 auto 40px;
+    font-size: 23px;
+    width: 1180px;
+    tr{
+      border: 1px solid #000;
+      th{
+        border: 1px solid #000;
+      }
+      td{
+        border: 1px solid #000;
+      }
+    }
   }
 }
 
 .score-footer{
   background-color: #333;
+  border-top: 1px solid #000;
   span{
     width: 100%;
     line-height: 80px;

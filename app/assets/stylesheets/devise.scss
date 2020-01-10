@@ -22,6 +22,10 @@ body{
     font-weight: 600;
     font-family: 'Kaiti TC',sans-serif;
     margin-top: 25px;
+    &-error{
+      color: red;
+      font-size: 15px;
+    }
   }
   .actions{
     text-align: center;

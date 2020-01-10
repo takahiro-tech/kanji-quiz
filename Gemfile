@@ -75,4 +75,5 @@ gem "font-awesome-rails"
 gem "gon"
 gem "jquery-rails"
 gem "devise"
+gem 'rails-i18n'
 

@@ -1,31 +1,84 @@
 .score-header
-  = link_to "←戻る", root_path
   .score-header_title
     = @user.nickname
     さんの過去の成績
+  .score-header_back
+    = link_to "←戻る", root_path
 
 .score-body
   -@scores.each do |score|
+    .score-time
+      = l score.created_at
     %table
-      %tbody
-        %tr
-          %th
-            問題
-          %td
-            - score.questions.each do|question|
-              = question
-        %tr
-          %th
-            答え
-          %td
-            - score.answer_text.each do|answer_text|
-              = answer_text
-        %tr
-          %th
-            正誤
-          %td
-            - score.result.each do |result|
-              = result
+      %tr
+        %th
+          問題
+        %td
+          = score.questions[0]
+        %td
+          = score.questions[1]
+        %td
+          = score.questions[2]
+        %td
+          = score.questions[3]
+        %td
+          = score.questions[4]
+        %td
+          = score.questions[5]
+        %td
+          = score.questions[6]
+        %td
+          = score.questions[7]
+        %td
+          = score.questions[8]
+        %td
+          = score.questions[9]
+      %tr
+        %th
+          答え
+        %td
+          = score.answer_text[0]
+        %td
+          = score.answer_text[1]
+        %td
+          = score.answer_text[2]
+        %td
+          = score.answer_text[3]
+        %td
+          = score.answer_text[4]
+        %td
+          = score.answer_text[5]
+        %td
+          = score.answer_text[6]
+        %td
+          = score.answer_text[7]
+        %td
+          = score.answer_text[8]
+        %td
+          = score.answer_text[9]
+      %tr
+        %th
+          正誤
+        %td
+          = score.result[0]
+        %td
+          = score.result[1]
+        %td
+          = score.result[2]
+        %td
+          = score.result[3]
+        %td
+          = score.result[4]
+        %td
+          = score.result[5]
+        %td
+          = score.result[6]
+        %td
+          = score.result[7]
+        %td
+          = score.result[8]
+        %td
+          = score.result[9]
 
 .score-footer
   %span
