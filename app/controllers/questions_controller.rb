@@ -6,12 +6,12 @@ class QuestionsController < ApplicationController
   end
 
   def new
-    @questions = Question.order("RAND()").limit(10)
+    @questions = Question.order(Arel.sql("RAND()")).limit(10)
     gon.questions = @questions
   end
 
   private
   def set_user
-    @user = User.find_by(id: current_user.id)
+    @user = User.find(current_user.id)
   end
 end

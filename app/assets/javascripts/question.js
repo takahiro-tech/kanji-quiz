@@ -2,7 +2,7 @@ qa = gon.questions
 index = 0
 
 gon.questions.forEach(function(question){
-	qa[index] = [question.statement, question.choice1, question.choice2, question.choice3, question.answer]
+	qa[index] = [question.statement, question.choice1, question.choice2, question.choice3, question.answer, question.reading]
 	index += 1
 })
 
@@ -11,6 +11,7 @@ count = 0; //問題番号
 q_sel = 3; //選択肢の数
 answers = new Array(); //解答記録
 
+const transpose = a => a[0].map((_, c) => a.map(r => r[c]));
 
 //問題表示
 window.onload = function quiz() {
@@ -61,6 +62,23 @@ function answer(num) {
 		$('#text_select').html("");
 		$('.footer-box__choice').append(html);
 		$('#score-page').on('click', function() {
+			let st = transpose(qa)
+			$.ajax({
+				url: '/scores',
+				type: 'POST',
+				dataType: 'html',
+				data: {
+					questions: st[0],
+					result: answers,
+					answer_text: st[5]
+				}
+			})
+			.done(function(){
+				alert('成績を記録しました');
+			})
+			.fail(function(){
+				alert('成績を記録できませんでした');
+			})
 			$('#score-page').remove();
 			$('#text_content').remove();
 			$('.major').css({
@@ -76,6 +94,11 @@ function answer(num) {
 			}
 			s += "</tr>";
 			//2行目
+			s += "<tr><th>答え</th>";
+			for (n=0;n<qa.length;n++) {
+				s += "<th>" + qa[n][5] + "</th>";
+			}
+			//3行目
 			s += "<tr><th>正誤</th>";
 			for (n=0;n<qa.length;n++) {
 				s += "<td>" + answers[n] + "</td>";
@@ -84,8 +107,8 @@ function answer(num) {
 			s += "</table>";
 			$('#text_question').html(s);
 			$('#text_question').css({
-				'font-size' : '43px'
+				'font-size' : '28px'
 			});
-		});	
+		});
 	}
 };

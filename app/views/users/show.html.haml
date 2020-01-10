@@ -1,0 +1,32 @@
+.score-header
+  = link_to "←戻る", root_path
+  .score-header_title
+    = @user.nickname
+    さんの過去の成績
+
+.score-body
+  -@scores.each do |score|
+    %table
+      %tbody
+        %tr
+          %th
+            問題
+          %td
+            - score.questions.each do|question|
+              = question
+        %tr
+          %th
+            答え
+          %td
+            - score.answer_text.each do|answer_text|
+              = answer_text
+        %tr
+          %th
+            正誤
+          %td
+            - score.result.each do |result|
+              = result
+
+.score-footer
+  %span
+    &copy; 2020 難読漢字クイズ
