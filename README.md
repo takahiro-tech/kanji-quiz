@@ -7,6 +7,9 @@
 |email|string|null: false|
 |password|string|null: false|
 
+### Association
+- has_many :scores
+
 
 
 ## questionsテーブル
@@ -17,3 +20,15 @@
 |choice2|string||
 |choice3|string||
 |answer|integer||
+|reading|string||
+
+## scoresテーブル
+|Column|Type|Options|
+|------|----|-------|
+|result|text||
+|questions|text||
+|answer_text|text||
+|user_id|references|foreign_key: true|
+
+### Association
+- belongs_to :user
