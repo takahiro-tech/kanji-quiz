@@ -29,19 +29,19 @@
 
 .score-body{
   overflow: scroll;
-  height: 550px;
+  height: calc(100vh - 242px);
   padding: 20px;
   text-align: center;
   .score-time{
     text-align: left;
     margin: 0 auto;
-    width: 1180px;
+    width: 95%;
   }
   table{
     background-color: #fff;
     margin: 0 auto 40px;
     font-size: 23px;
-    width: 1180px;
+    width: 95%;
     tr{
       border: 1px solid #000;
       th{
